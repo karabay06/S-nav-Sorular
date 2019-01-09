@@ -1,0 +1,40 @@
+class Program
+    {  //Girilen Sayilarin Toplamini Ve Ortalamasini Metodla Bulan Program
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Kaç adet sayi gircen");
+            int adet = Convert.ToInt32(Console.ReadLine());
+            float toplam = toplama(adet);
+            float sonuc = ortalama(toplam, adet);
+            Console.WriteLine("Toplam {0}", toplam);
+            Console.WriteLine("Ortalama {0}",sonuc);
+
+
+            Console.ReadLine();
+        }
+        public static float toplama(int a)
+        {
+
+            float toplam = 0;
+            for (int i = 0; i <a ; i++)
+            {
+                Console.WriteLine("Sayi Gir");
+                int girilen = Convert.ToInt32(Console.ReadLine());
+                
+                toplam += girilen;
+                
+                
+                
+                
+
+            }
+            return toplam ;
+        }
+        public static float ortalama(float a,int b)
+        {
+            float sonuc = 0;
+            sonuc = a / b;
+            return sonuc;
+        }
+    }
+}
