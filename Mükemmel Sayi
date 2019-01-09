@@ -1,0 +1,43 @@
+class Program
+    { //Mükemmel Sayi
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Sayi Gir");
+            int sayi = Convert.ToInt32(Console.ReadLine());
+            bool bak = mükemmel(sayi);
+            if (bak)
+            {
+                Console.WriteLine("Mükemmel Sayi");
+            }
+            else
+            {
+                Console.WriteLine("Mükemmel Sayi Değil");
+            }
+            Console.ReadLine();
+
+        }
+        public static bool mükemmel(int a)
+        {
+            bool kontrol = false;
+            int toplam = 0;
+            for (int i = 1; i < a; i++)
+            {
+                if (a%i==0)
+                {
+                    toplam += i;
+                    
+                }
+                if (toplam==a)
+                {
+                    kontrol = true;
+                }
+                else
+                {
+                    kontrol = false;
+                }
+                
+            }
+            return kontrol;
+        }
+    }
+}
