@@ -1,0 +1,55 @@
+echo "# S-nav-Sorular" >> README.md 
+git init 
+git add ekle README.md 
+git commit -m "ilk taahhüt" 
+git uzaktan menşei ekle https://github.com/karabay06/S-nav-Sorular.git
+ git push -u kökeni ana
+//0,1000 Arasi Random Sayi Tutan,Bizim Girdiğimiz sayiya göre yönlendirip kaç hamlade bulduğumuzu gösteren program.
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            
+            Random rnd = new Random();
+            int sayac = 1;
+            int tutulan = rnd.Next(0,1000);
+            bool kontrol = false;
+            while (!kontrol)
+            {
+
+                Console.WriteLine("Sayi Gir");
+                int sayi = Convert.ToInt32(Console.ReadLine());
+
+                if (sayi<tutulan)
+                {
+                    sayac++;
+                    Console.WriteLine("Sayiyi Büyüt");
+                    
+                    
+
+                    
+                }
+                else if (sayi>tutulan)
+                {
+                    sayac++;
+                    Console.WriteLine("Sayiyi Küçült");
+                    
+                    
+
+                    
+                }
+                
+                if (sayi==tutulan)
+                {
+                    kontrol = true;
+                    break;
+                }
+
+
+
+
+            }
+            
+            Console.WriteLine("Sayiyi {0}.hamlede buldun", sayac);
+            
+            Console.ReadLine();
